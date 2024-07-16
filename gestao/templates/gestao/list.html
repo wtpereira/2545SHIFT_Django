@@ -1,0 +1,11 @@
+{% if livros %}
+    <ul>
+        {% for livro in livros %}
+            <li>
+                <a href="/gestao/livro/{{ livro.id }}"> {{livro.titulo}} </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhum livro cadastrado.</p>
+{% endif %}
