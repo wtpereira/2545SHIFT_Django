@@ -1,11 +1,20 @@
-{% if livros %}
-    <ul>
-        {% for livro in livros %}
-            <li>
-                <a href="/gestao/livro/{{ livro.id }}"> {{livro.titulo}} </a>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>Nenhum livro cadastrado.</p>
-{% endif %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'list.css' %}" />
+{% endblock static %}
+
+{% block content %}
+    {% if livros %}
+        <ul>
+            {% for livro in livros %}
+                <li>
+                    <a href="/gestao/livro/{{ livro.id }}"> {{livro.titulo}} </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum livro cadastrado.</p>
+    {% endif %}
+{% endblock content %}

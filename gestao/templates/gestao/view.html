@@ -1,2 +1,6 @@
-<p>Título do livro: {{ livro.titulo}} </p>
-<p>Quantidade de páginas: {{ livro.paginas}} </p>
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Título do livro: {{ livro.titulo}} </p>
+    <p>Quantidade de páginas: {{ livro.paginas}} </p>
+{% endblock content %}
