@@ -85,6 +85,13 @@ DATABASES = {
         "HOST": getenv('PGHOST'),
         "USER": getenv('PGUSER'),
         "PASSWORD": getenv('PGPASSWORD'),
+    },
+    "mongodb": {
+        "ENGINE": "djongo",
+        "ENFORCE_SCHEMA": False,
+        "CLIENT": {
+            "host": getenv('MONGODB_CONNECTION_STRING')
+        }
     }
 }
 
